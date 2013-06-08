@@ -1,0 +1,25 @@
+<h3>Quizzes</h3>
+
+<div class="well">
+	<table class="table table-striped">
+	  <thead>
+  	  <tr>
+  	    <th>Name</th>
+        <th></th>
+        <th></th>
+        <th></th>
+  	  </tr>
+  	</thead>
+  	<tbody>
+  	  <% @quizzes.each do |quiz| %>
+  	    <tr>
+  	      <td><%= quiz.name %></td>
+  	      <td><%= link_to "Show", quiz, :class => 'btn btn-mini btn-primary' %></td>
+  	      <td><%= link_to "Edit", edit_quiz_path(quiz), :class => 'btn btn-mini' %></td>
+  	      <td><%= link_to "Destroy", quiz, :confirm => 'Are you sure?', :method => :delete, :class => 'btn btn-mini btn-danger' %></td>
+  	    </tr>
+  	  <% end %>
+  	</tbody>
+	</table>
+</div>
+<p><%= link_to "New Quiz", new_quiz_path, :class => 'btn primary' %></p>
