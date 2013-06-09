@@ -1,0 +1,7 @@
+one:
+  content: MyString
+  is_right: false
+
+two:
+  content: MyString
+  is_right: false
